@@ -1,6 +1,11 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Scenario
 metadata:
-  name: st22-ai-scenario
+  name: st22-ai
 spec:
-  description: "AI Gateway for ST22 dump analysis"
+  description: "ST22 Dump Analysis AI Scenario"
+  # version you want to register
+  version: "1.0.0"
+  executables:
+    - name: st22-ai-workflow
+      type: workflow
