@@ -1,0 +1,6 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Scenario
+metadata:
+  name: st22-ai-scenario
+spec:
+  description: "AI Gateway for ST22 dump analysis"
