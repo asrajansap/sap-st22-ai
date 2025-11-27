@@ -1,0 +1,17 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Workflow
+metadata:
+  name: st22-ai-workflow
+spec:
+  templates:
+    - name: build-and-run
+      image: docker.io/python:3.10
+      action: train
+      command:
+        - sh
+        - -c
+        - |
+          echo "Building FastAPI AI Gateway"
+          docker build -t st22-ai-gateway ./python-gateway
+          echo "Run container locally for testing"
+          docker run -p 8000:8000 st22-ai-gateway
