@@ -1,0 +1,15 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: ServingTemplate
+metadata:
+  name: st22-ai-serving
+spec:
+  image: <YOUR_DOCKER_REPO>/st22-ai-gateway:latest
+  ports:
+    - name: http
+      port: 8000
+  env:
+    - name: OPENAI_API_KEY
+      valueFrom:
+        secretKeyRef:
+          name: openai-key
+          key: apiKey
