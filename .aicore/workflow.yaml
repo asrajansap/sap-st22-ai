@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Workflow
 metadata:
-  name: sap-st22-ai-workflow
+  name: st22-ai-workflow
 spec:
   templates:
     - name: build-and-run
